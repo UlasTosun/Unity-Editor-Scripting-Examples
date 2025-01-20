@@ -25,7 +25,7 @@ public static class HierarchyColoring {
         GameObject gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
 
         // If the GameObject is not null, change its background color in the Hierarchy window.
-        if (gameObject != null && gameObject.name.Equals("Painted Object"))
+        if (gameObject != null && gameObject.name.Equals("Painted Object (Custom Hierarchy)"))
             ChangeBackgroundColor(gameObject, selectionRect);
     }
 

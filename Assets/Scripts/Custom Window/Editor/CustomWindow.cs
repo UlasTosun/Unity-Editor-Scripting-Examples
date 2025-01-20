@@ -45,7 +45,7 @@ public class CustomWindow : EditorWindow {
 
         // Optional settings (visible only when the toggle is enabled)
         _groupEnabled = EditorGUILayout.BeginToggleGroup("Optional Settings", _groupEnabled);
-        GUILayout.Label("This is only visible when the toggle is enabled");
+        GUILayout.Label("This is visible only when the toggle is enabled.");
         GUILayout.Toggle(true, "My toggle");
         EditorGUILayout.Toggle("Another toggle", true);
         EditorGUILayout.Slider(0.5f, 0, 1);
