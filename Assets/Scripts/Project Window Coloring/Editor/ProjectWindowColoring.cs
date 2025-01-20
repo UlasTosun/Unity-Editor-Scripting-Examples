@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using UnityEngine.UI;
 
 
 
@@ -15,7 +14,7 @@ public static class ProjectWindowColoring {
         // So, we need to remove the previous delegate to avoid multiple calls.
         EditorApplication.projectWindowItemOnGUI -= ProjectWindowItemOnGUI;
 
-        // Then, we add the delegate to the EditorApplication.hierarchyWindowItemOnGUI event.
+        // Then, we add the delegate to the EditorApplication.projectWindowItemOnGUI event.
         EditorApplication.projectWindowItemOnGUI += ProjectWindowItemOnGUI;
     }
 
@@ -34,7 +33,8 @@ public static class ProjectWindowColoring {
         if (asset == null)
             return;
 
-        // If the asset is a C# script, change its background color in the Project window.
+        // Filter assets by your own criteria here.
+        // If the asset is a C# script, change its background color in the project window.
         if (assetPath.EndsWith(".cs"))
             ChangeBackgroundColor(asset, selectionRect);
 
@@ -49,12 +49,12 @@ public static class ProjectWindowColoring {
         selectionRect.y += 71;
         selectionRect.height = 13;
 
-        // Set the background color of the GameObject in the Hierarchy window.
-        EditorGUI.DrawRect(selectionRect, Color.red);
+        // Set the background color of the GameObject in the project window.
+        EditorGUI.DrawRect(selectionRect, Color.green);
 
-        // Set the label and text color of the GameObject in the Hierarchy window.
+        // Set the label and text color of the GameObject in the project window.
         GUIStyle style = new(EditorStyles.label);
-        style.normal.textColor = Color.yellow;
+        style.normal.textColor = Color.red;
         style.fontSize = 10;
         EditorGUI.LabelField(selectionRect, asset.name, style);
 

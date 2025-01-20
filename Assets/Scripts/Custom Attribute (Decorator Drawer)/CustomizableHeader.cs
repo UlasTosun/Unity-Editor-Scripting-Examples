@@ -10,37 +10,23 @@ using UnityEngine;
 [AttributeUsage(AttributeTargets.Field, AllowMultiple = true, Inherited = true)]
 public class HeaderAttribute : PropertyAttribute {
 
-    /// <summary>
-    /// Header text.
-    /// </summary>
     public readonly string Header;
-
-    /// <summary>
-    /// Font size.
-    /// </summary>
     public readonly int FontSize;
+    public readonly TextAnchor TextAnchor;
+    public readonly FontStyle FontStyle;
+
 
     /// <summary>
-    /// Color. For all available colors see:
+    /// For all available colors see:
     /// <para>https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html#ColorNames</para>
     /// </summary>
     public readonly Color Color;
 
     /// <summary>
-    /// Background color. For all available colors see:
+    /// For all available colors see:
     /// <para>https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/StyledText.html#ColorNames</para>
     /// </summary>
     public readonly Color BackgroundColor;
-
-    /// <summary>
-    /// Text anchor.
-    /// </summary>
-    public readonly TextAnchor TextAnchor;
-
-    /// <summary>
-    /// Font style.
-    /// </summary>
-    public readonly FontStyle FontStyle;
 
 
 
@@ -66,5 +52,7 @@ public class HeaderAttribute : PropertyAttribute {
             Debug.LogWarning("Background color " + backgroundColor + " not found. Using transparent background.");
         }
     }
+
+    
 
 }

@@ -3,9 +3,6 @@ using UnityEditor;
 
 
 
-/// <summary>
-/// Customizable header drawer.
-/// </summary>
 [CustomPropertyDrawer(typeof(HeaderAttribute))]
 public class HeaderDrawer : DecoratorDrawer {
 
@@ -21,6 +18,7 @@ public class HeaderDrawer : DecoratorDrawer {
         style.normal.textColor = HeaderAttribute.Color;
         style.alignment = HeaderAttribute.TextAnchor;
 
+        // Create a rect for the header which is a bit taller than the default height
         Rect rect = new(position.x, position.y + 15f, position.width, HeaderAttribute.FontSize * 1.3f);
         EditorGUI.DrawRect(rect, HeaderAttribute.BackgroundColor);
 
@@ -33,6 +31,7 @@ public class HeaderDrawer : DecoratorDrawer {
 
 
     public override float GetHeight()  {
+        // Increase the height of the header to fit bigger font sizes
         return HeaderAttribute.FontSize * 1.3f + 18f;
     }
 

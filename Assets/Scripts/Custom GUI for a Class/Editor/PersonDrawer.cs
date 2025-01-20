@@ -57,6 +57,7 @@ public class PersonDrawer : PropertyDrawer {
 
     // Override the height of the property
     public override float GetPropertyHeight(SerializedProperty property, GUIContent label) {
+        // The height of the property is the height of two lines, one for the label and one for the properties
         return EditorGUIUtility.singleLineHeight * 2;
     }
 

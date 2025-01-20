@@ -12,19 +12,17 @@ public class PathDrawer : Editor {
 
 
     public override void OnInspectorGUI() {
-        serializedObject.Update();
-
+        serializedObject.Update(); // Update the serialized object to get the latest values from the script
         SerializedProperty points = serializedObject.FindProperty("Points");
-
-        // Draw default inspector to be able to see the points list
-        DrawDefaultInspector();
+        
+        DrawDefaultInspector(); // Draw default inspector to be able to see the points list
 
         DrawTotalDistance(points);
         DrawMode();
         EditorGUILayout.Space(20);
         DrawClearButton();
 
-        serializedObject.ApplyModifiedProperties();
+        serializedObject.ApplyModifiedProperties(); // Apply the changes to the serialized object
     }
 
 
@@ -35,7 +33,7 @@ public class PathDrawer : Editor {
         for (int i = 0; i < Path.Points.Count - 1; i++) {
             Vector3 p1 = Path.Points[i];
             Vector3 p2 = Path.Points[i + 1];
-            Handles.DrawLine(p1, p2); // Draw a line between the points
+            Handles.DrawLine(p1, p2); // Draw a line between sequential points
         }
 
         // Draw the points as handles and allow them to be moved
@@ -60,12 +58,12 @@ public class PathDrawer : Editor {
         style.fontSize = 24;
         style.fontStyle = FontStyle.Bold;
         Color originalColor = GUI.backgroundColor;
-        GUI.backgroundColor = Color.red;
+        GUI.backgroundColor = Color.red; // Change the background color of GUI to the color of the button
 
         if (GUILayout.Button("Clear All", style))
             Path.ClearAll();
 
-        GUI.backgroundColor = originalColor;
+        GUI.backgroundColor = originalColor; // Reset the background color
     }
 
 

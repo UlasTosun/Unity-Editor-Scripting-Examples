@@ -11,7 +11,7 @@ public class ShowFrequencyAttribute : PropertyAttribute {
 
 
     public ShowFrequencyAttribute(bool showUnit = true) {
-        this.ShowUnit = showUnit;
+        ShowUnit = showUnit;
     }
 
     

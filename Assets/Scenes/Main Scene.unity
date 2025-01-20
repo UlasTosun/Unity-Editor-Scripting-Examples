@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 911804780}
   - component: {fileID: 911804779}
   m_Layer: 0
-  m_Name: Person (Custom GUI)
+  m_Name: Person (Custom GUI for a Class)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -544,10 +544,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Points:
-  - {x: 0, y: 0, z: 0}
-  - {x: 1.5428295, y: 0, z: -0.16547108}
-  - {x: 0.6378464, y: 0, z: 1.7739699}
-  - {x: 2.5348403, y: 0, z: 1.2352045}
+  - {x: -6.6197186, y: 2.74106, z: -9.191733}
+  - {x: 5.93846, y: -2.3170166, z: -5.5084267}
+  - {x: -6.723326, y: 0, z: 6.8258023}
+  - {x: 6.037869, y: 0.8173188, z: 8.357752}
   _pathType: 1
   _repeatCount: 1
 --- !u!4 &931690319

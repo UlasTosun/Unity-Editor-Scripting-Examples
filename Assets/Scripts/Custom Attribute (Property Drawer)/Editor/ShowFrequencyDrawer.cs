@@ -21,18 +21,18 @@ public class ShowFrequencyDrawer : PropertyDrawer {
         // Long is also considered as integer by Unity Editor
         if (property.propertyType == SerializedPropertyType.Integer) {
             property.intValue = EditorGUI.IntField(propertyRect, label.text, property.intValue);
-            DrawFrequency(frequencyRect, property, label);
+            DrawFrequency(frequencyRect, property);
 
 
         // Double is also considered as float by Unity Editor
         } else if (property.propertyType == SerializedPropertyType.Float) {
             property.floatValue = EditorGUI.FloatField(propertyRect, label.text, property.floatValue);
-            DrawFrequency(frequencyRect, property, label);
+            DrawFrequency(frequencyRect, property);
 
         } else {
             GUIStyle style = new(EditorStyles.label);
             style.normal.textColor = Color.red;
-            EditorGUI.LabelField(position, label.text, "Use ShowFrequency with numeric types only.", style);
+            EditorGUI.LabelField(position, label.text, "Use ShowFrequency only with numeric fields.", style);
         }
 
         // End property
@@ -42,7 +42,7 @@ public class ShowFrequencyDrawer : PropertyDrawer {
 
 
 
-    private void DrawFrequency(Rect position, SerializedProperty property, GUIContent label) {
+    private void DrawFrequency(Rect position, SerializedProperty property) {
         LimitTime(property);
         float time = property.propertyType == SerializedPropertyType.Integer ? property.intValue : property.floatValue;
         float frequency = 1f / time;

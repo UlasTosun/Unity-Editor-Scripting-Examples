@@ -24,6 +24,7 @@ public static class HierarchyColoring {
         // Get the GameObject by its instance ID.
         GameObject gameObject = EditorUtility.InstanceIDToObject(instanceID) as GameObject;
 
+        // Filter GameObjects by your own criteria here.
         // If the GameObject is not null, change its background color in the Hierarchy window.
         if (gameObject != null && gameObject.name.Equals("Painted Object (Custom Hierarchy)"))
             ChangeBackgroundColor(gameObject, selectionRect);
@@ -36,10 +37,10 @@ public static class HierarchyColoring {
         selectionRect.x += 18;
         selectionRect.y += 1;
 
-        // Set the background color of the GameObject in the Hierarchy window.
+        // Set the background color of the GameObject in the hierarchy window.
         EditorGUI.DrawRect(selectionRect, Color.red);
 
-        // Set the label and text color of the GameObject in the Hierarchy window.
+        // Set the label and text color of the GameObject in the hierarchy window.
         GUIStyle style = new (EditorStyles.label);
         style.normal.textColor = Color.yellow;
         style.fontStyle = FontStyle.Bold;
