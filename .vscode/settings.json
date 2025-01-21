@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "editor-scripting-examples.sln"
+    "dotnet.defaultSolution": "Unity-Editor-Scripting-Examples.sln"
 }
