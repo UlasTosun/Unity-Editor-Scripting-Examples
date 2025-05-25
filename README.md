@@ -3,6 +3,8 @@
 
 This repository contains basic examples for editor scripting in Unity. Example cases are from basic to intermediate levels and don't cover advanced topics.
 
+If you are looking for advanced examples, I have two assets in my [Unity Asset Store publisher account](https://assetstore.unity.com/publishers/115934): [Hierarchy Focused Debug Console](https://u3d.as/3wJE) and [Easy Handles Attributes](https://u3d.as/3y9X). Both are free and have source code available.
+
 ## Example Cases
 
 **Custom Attribute with Decorator Drawer:** An example which demonstrates the usage of decorator drawer for custom attributes. It provides a customizable header attribute.
